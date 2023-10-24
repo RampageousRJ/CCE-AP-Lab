@@ -10,7 +10,7 @@ except ValueError:
     print("Not real numbered")
     exit()
 
-if op=="=":
+if op=="+":
     print(num1+num2)
 elif op=="-":
     try:

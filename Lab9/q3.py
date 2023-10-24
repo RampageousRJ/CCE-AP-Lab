@@ -27,27 +27,34 @@ if __name__=='__main__':
     acc = Bank()
     emps.append(acc)
     while True:
-        ch = int(input("\nOPTIONS\n1.Register\n2.Login\nEnter choice: "))
+        ch = int(input("\nOPTIONS\n1.Register\n2.Login\n3.Exit\nEnter choice: "))
         if ch==1:
             acc=Bank()
             emps.append(acc)
         elif ch==2:
             name=input("Enter name: ")
+            flag=False
             for emp in emps:
                 if name.lower()==emp.name.lower():
                     print("\nLogged In!")
+                    flag=True
                     while True:
-                        ch1=int(input("\nMENU\n1.Display\n2.Withdraw\n3.Deposit\nEnter choice: "))
+                        ch1=int(input("\nMENU\n1.Display\n2.Withdraw\n3.Deposit\n4.LogoutEnter choice: "))
                         if ch1==1:
                             emp.display()
                         elif ch1==2:
-                            amount=int(input('Enter amount: '))
-                            emp.withdraw(amount)
+                            emp.withdraw(int(input('Enter amount: ')))
                         elif ch1==3:
-                            amount=int(input('Enter amount: '))
-                            emp.deposit(amount)
-                        else:
+                            emp.deposit(int(input('Enter amount: ')))
+                        elif ch1==4:
                             print("Logging Out!")
                             break
-        else:
+                        else:
+                            print("Invalid Option...")
+            if flag==False:
+                print("User Not Found")
+        elif ch==3:
+            print("Thank you for using this service...")
             break
+        else:
+            print("Invalid Option...")
