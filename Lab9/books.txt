@@ -1,0 +1,4 @@
+JK Rowling,Harry Potter,500,ABC,4
+Harper Lee,To Kill A Mockingbird,1000,ABC,8
+John Green,The Fault In Our Stars,600,ABC,1
+Jane Austin,Pride And Prejudice,150,ABC,0

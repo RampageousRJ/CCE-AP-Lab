@@ -1,6 +1,5 @@
 Abc.example.com
 abc-d@mail.com
-abc..def@mail.com
 abc.def@mail.com
 .abc@mail.com
 abc@mail.com

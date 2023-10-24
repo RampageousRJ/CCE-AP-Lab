@@ -11,15 +11,14 @@ while True:
         print(f"Recieved [{rstr}]")
         if rstr=="Stop":
             break
-        length = len(rstr)
         rstr = rstr.lower()
         vowel=0
         for char in rstr:
             if char=='a' or char=='e' or char=='i' or char=='o' or char=='u':
                 vowel+=1
         if(rstr == rstr[::-1]):
-            newsockfd.send((f"String is PALINDROME with length {length} and vowel count {vowel}").encode())
+            newsockfd.send((f"String is PALINDROME with length {len(rstr)} and vowel count {vowel}").encode())
         else:
-            newsockfd.send((f"String is NOT PALINDROME with length {length} and vowel count {vowel}").encode())
+            newsockfd.send((f"String is NOT PALINDROME with length {len(rstr)} and vowel count {vowel}").encode())
     print("Disconnecting from",addr)
     newsockfd.close()

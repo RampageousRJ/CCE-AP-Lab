@@ -1,6 +1,5 @@
 from tkinter import *
 
-
 class Application(Frame):
     
     def __init__(self,master=None):
@@ -41,37 +40,37 @@ class Application(Frame):
         self.text_label = Label(self, text=self.placeholder)
         self.text_label.grid(row = 0,column = 0, columnspan = 5)
         
-    def function(self, operator):
-        self.placeholder = self.placeholder+f"{operator}"
+    def function(self, op):
+        self.placeholder = self.placeholder+f"{op}"
         self.text_label = Label(self, text=self.placeholder)
         self.text_label.grid(row = 0,column = 0, columnspan = 5)
         
     def equals(self):
-        operator = ""
+        op = ""
         for i in range(len(self.placeholder)):
             try:
                 int(self.placeholder[i])
             except:
-                operator = self.placeholder[i]
-                mid = i
+                op = self.placeholder[i]
+                m = i
                 
-        if operator == "+":
-            self.placeholder = str(int(self.placeholder[:mid]) + int(self.placeholder[mid+1:]))
+        if op == "+":
+            self.placeholder = str(int(self.placeholder[:m]) + int(self.placeholder[m+1:]))
             self.clear()
             self.text_label = Label(self, text=self.placeholder)
             self.text_label.grid(row = 0,column = 0, columnspan = 5)
-        elif operator == "-":
-            self.placeholder = str(int(self.placeholder[:mid]) - int(self.placeholder[mid+1:]))
+        elif op == "-":
+            self.placeholder = str(int(self.placeholder[:m]) - int(self.placeholder[m+1:]))
             self.clear()
             self.text_label = Label(self, text=self.placeholder)
             self.text_label.grid(row = 0,column = 0, columnspan = 5)
-        elif operator == "*":
-            self.placeholder = str(int(self.placeholder[:mid]) * int(self.placeholder[mid+1:]))
+        elif op == "*":
+            self.placeholder = str(int(self.placeholder[:m]) * int(self.placeholder[m+1:]))
             self.clear()
             self.text_label = Label(self, text=self.placeholder)
             self.text_label.grid(row = 0,column = 0, columnspan = 5)
-        elif operator == "/":
-            self.placeholder = str(int(self.placeholder[:mid]) / int(self.placeholder[mid+1:]))
+        elif op == "/":
+            self.placeholder = str(int(self.placeholder[:m]) / int(self.placeholder[m+1:]))
             self.clear()
             self.text_label = Label(self, text=self.placeholder)
             self.text_label.grid(row = 0,column = 0, columnspan = 5)
