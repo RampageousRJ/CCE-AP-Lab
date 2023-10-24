@@ -1,0 +1,5 @@
+abc..def@mail.com
+abc.def@mail.com
+abc@mail.com
+abc_def@mail.com
+rishabh.jain1@learner.manipal.edu

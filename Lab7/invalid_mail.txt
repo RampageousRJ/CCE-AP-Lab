@@ -1,0 +1,7 @@
+Abc.example.com
+abc-d@mail.com
+.abc@mail.com
+abc#def@mail.com
+A@b@c@example.com
+a"b(c)d,e:f;g<h>i[j\k]l@example.com
+this\still\"notallowed@example.
