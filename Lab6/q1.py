@@ -54,12 +54,12 @@ def update():
         print("NO RECORDS FOUND...")
         return
     field = input("Enter field to be updated: ")
-    newval = input("Enter New Value: ")
-    data = cur.execute(f"UPDATE STUDENT SET {field}={newval}")
+    newval = input("Enter new value: ")
+    data = cur.execute(f"UPDATE STUDENT SET {field}={newval} WHERE REG={regno}")
     conn.commit()
     print("Updated Successfully...")
     
-def deleteRec():
+def delete():
     regno=input("Regno to be deleted: ")
     cur = conn.cursor()
     data = cur.execute(f"SELECT * FROM STUDENT WHERE REG={regno}")
@@ -84,7 +84,7 @@ if __name__=='__main__':
         elif ch==3:
             update()
         elif ch==4:
-            deleteRec()
+            delete()
         elif ch==5:
             display()
         elif ch==6:
