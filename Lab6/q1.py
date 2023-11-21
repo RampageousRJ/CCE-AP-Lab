@@ -39,7 +39,7 @@ def read():
         
 def display():
     cur = conn.cursor()
-    data = cur.execute(" SELECT * FROM STUDENT")
+    data = cur.execute("SELECT * FROM STUDENT")
     for row in data:
         print(row)
         
